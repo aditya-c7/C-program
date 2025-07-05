@@ -8,9 +8,9 @@ This repository contains simple C programs written for learning and demonstratio
 File: `tax.c`  
 A basic program that calculates tax based on income input.
 
-### 2. Encryption (Caesar Cipher)
+### 2. Encryption 
 File: `encryption.c`  
-Encrypts and decrypts text using a Caesar cipher for printable ASCII characters.
+Encrypts and decrypts text for printable ASCII characters.
 
 ## How to Run
 
