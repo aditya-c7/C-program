@@ -1,13 +1,22 @@
-# 💸 C Tax Calculator (India FY 2025–26)
+# C-Program Collection
 
-A simple C program to calculate income tax as per India's latest tax slabs (new regime) including surcharge and 4% cess.
+This repository contains simple C programs written for learning and demonstration.
 
-## ⚙️ Features
-- Accepts salary/income input
-- Applies slab-wise tax rates (0% to 30%)
-- Adds surcharge for high-income levels
-- Applies 4% health & education cess
-- Validates input
+## Included Programs
 
+### 1. Tax Calculator
+File: `tax.c`  
+A basic program that calculates tax based on income input.
 
+### 2. Encryption (Caesar Cipher)
+File: `encryption.c`  
+Encrypts and decrypts text using a Caesar cipher for printable ASCII characters.
 
+## How to Run
+
+```bash
+gcc encryption.c -o encryption
+./encryption
+
+gcc tax.c -o tax
+./tax
