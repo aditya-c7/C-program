@@ -2,8 +2,7 @@
 #include <windows.h>
 #include <string.h>
 
-
-void loadingEffect()
+void encryptEffect()
 {
     printf("Encrypting");
     fflush(stdout);
@@ -12,14 +11,28 @@ void loadingEffect()
     {
         printf(".");
         fflush(stdout);
-        Sleep(1000); //
+        Sleep(1000); 
+    }
+    printf("\r                                                                   \r");
+}
+
+void decryptEffect()
+{
+    printf("Decrypting");
+    fflush(stdout);
+
+    for (int i = 0; i < 3; i++)
+    {
+        printf(".");
+        fflush(stdout);
+        Sleep(1000); 
     }
     printf("\r                                                                   \r");
 }
 
 int main()
 {
-    printf("Welcome to the Encryption [ME1.O]\n");
+    printf("Welcome to the Encryption and Decryption [1.0]\n");
 
     char message[101], choice;
     int key, i;
@@ -28,7 +41,7 @@ int main()
     {
         printf("\n\033[1;32mPress 'E' to Encrypt & 'D' to Decrypt: \033[0m");
         scanf(" %c", &choice);
-        getchar(); //
+        getchar(); 
 
         if (choice == 'E' || choice == 'e')
         {
@@ -37,19 +50,19 @@ int main()
 
             printf("\nEnter the E-Key: ");
             scanf("%d", &key);
-            getchar(); //
+            getchar(); 
 
             for (i = 0; message[i] != '\0'; i++)
             {
                 char ch = message[i];
 
-                if (ch >= 32 && ch <= 126)               //Ascii printable charecters onlyy.
+                if (ch >= 32 && ch <= 126) // Ascii printable charecters onlyy.
                 {
                     ch = ((ch - 32 + key) % 95) + 32;
                 }
                 message[i] = ch;
             }
-            loadingEffect();
+            encryptEffect();
             printf("\n\033[36mEncrypted Message is:> %s\033[0m\n\n", message);
         }
         else if (choice == 'D' || choice == 'd')
@@ -59,7 +72,7 @@ int main()
 
             printf("\nEnter the E-Key: ");
             scanf("%d", &key);
-            getchar(); // flush
+            getchar(); 
 
             for (i = 0; message[i] != '\0'; i++)
             {
@@ -70,7 +83,7 @@ int main()
                 }
                 message[i] = ch;
             }
-            loadingEffect();
+            decryptEffect();
             printf("\n\033[36mDecrypted message is:> %s\033[0m\n\n", message);
         }
         else
