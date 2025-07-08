@@ -12,11 +12,21 @@ A basic program that calculates tax based on income input.
 File: `encryption.c`  
 Encrypts and decrypts text for printable ASCII characters.
 
+### 3. Banking System
+File: `bank.c`
+A command-line banking simulation program with the following features:
+Check account balance
+Deposit money
+Withdraw money (with validation for sufficient funds)
+
 ## How to Run
 
 ```bash
+gcc tax.c -o tax
+./tax
+
 gcc encryption.c -o encryption
 ./encryption
 
-gcc tax.c -o tax
-./tax
+gcc bank.c -o bank
+./bank
