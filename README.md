@@ -19,6 +19,10 @@ Check account balance
 Deposit money
 Withdraw money (with validation for sufficient funds)
 
+### 2. R@nsomw@re 
+File: `R4N$OMW4R3-v1.c`  
+For file Deletion and Encryption using XOR.
+
 ## How to Run
 
 ```bash
